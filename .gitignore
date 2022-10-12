@@ -4,3 +4,5 @@ src/joeldata.egg-info
 .vscode/
 *-test.py
 TODO.md
+pip-package-test.py
+local-test.py

@@ -1,3 +1,4 @@
 from .stack import Stack
 from .queue import Queue
-from .bst import BST, BinarySearchTree
+from .BST import BST, BinarySearchTree
+from .HashTable import HashTable

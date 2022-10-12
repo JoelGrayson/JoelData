@@ -1,5 +1,9 @@
 # JoelData
-Simple data types I to use in my projects.
+Simple data types I use in my projects.
+```py
+pip3 install joeldata
+```
+
 
 # Documentation
 ## Stack
@@ -43,4 +47,57 @@ my_bst=BST()
 * `search(value) -> bool` - sees if a value is in the BST
 * `inorder() -> item[]` - returns the items as an array in order
 * `remove(item)` - removes an item from the BST
+
+
+# HashTable
+Implementation of the object in JavaScript, `java.util.HashMap` in Java, and dictionary in Python.
+
+```py
+from joeldata import HashTable
+my_ht=HashTable()
+```
+
+* `get(key) -> value` - returns the HashMap's value of the key
+* `set(key, value)` - sets the HashMap to your value at the key
+* `clear()` - removes all the key-value pairs, emptying the HashMap.
+* `remove(key) -> value` - removes the key-value pairs at the specified key. Returns the removed value.
+* `size() -> int` - returns the number of key-value pairs.
+* `is_empty() -> bool` - returns whether or not the HashMap has no key-value pairs.
+* `has(key) -> bool` - returns whether or not the HashMap has a key-value pair of the specified key.
+* `keys() -> any[]` - returns all the keys of the HashMap in an array.
+* `values() -> any[]` - returns all the values of the HashMap in an array.
+* `inspect() -> str` - returns the raw self.data for development purposes
+
+
+## Example
+```py
+>>> from joeldata import HashTable
+>>> ht=HashTable()
+>>> ht.set('hi', 'world')
+>>> ht.get('hi')
+'world'
+>>> ht.set('things', ['joel', 'bowl'])
+>>> print(ht)
+HashTable {
+	things: ['joel', 'bowl'],
+	hi: world
+}
+>>> ht.has('hi')
+True
+>>> ht.size()
+2
+>>> ht.keys()
+['things', 'hi']
+>>> ht.values()
+[['joel', 'bowl'], 'world']
+>>> ht.remove('things')
+['joel', 'bowl']
+>>> print(ht)
+HashTable {
+	hi: world
+}
+>>> ht.clear()
+>>> print(ht)
+{}
+```
 

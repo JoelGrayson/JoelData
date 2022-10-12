@@ -1,4 +1,4 @@
-from TreeNode import TreeNode
+from .TreeNode import TreeNode
 
 '''
 Best case: O(1) - find root
