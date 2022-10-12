@@ -8,9 +8,10 @@ read -r new_version
 sed "s/^version = .*$/version = \"$new_version\"/" pyproject.toml > temp
 cat temp > pyproject.toml
 rm temp
+# </>
 
 echo "-----Build-----"
 rm -rf dist
-rm -rf src/joelclui.egg-info
+rm -rf src/joeldata.egg-info
 python3 -m build
 twine upload dist/*

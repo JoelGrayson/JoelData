@@ -1,6 +1,6 @@
 **/__pycache__
 dist/*
-src/joelclui.egg-info
+src/joeldata.egg-info
 .vscode/
 *-test.py
 TODO.md
